@@ -2,203 +2,42 @@
 <html lang="en-AU">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Equals Imaginarium — where ideas become experiments</title>
-  <meta name="description" content="Equals Imaginarium is a creative engineering and imagination lab in Perth, Australia, where ideas become experiments — from radio aerials to whatever comes next.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Equals Imaginarium</title>
+  <meta name="description" content="Equals Imaginarium: a wordless, first-person 3D space to float through, where orbiting bodies sweep past on golden-ratio time.">
   <meta name="theme-color" content="#0f1220">
-  <!-- Canonical URL: GitHub Pages -->
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Imaginarium">
   <link rel="canonical" href="https://edgerequals.github.io/equals-imaginarium/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Equals Imaginarium">
-  <meta property="og:description" content="A creative engineering lab where ideas become experiments.">
+  <meta property="og:description" content="Float inside the experiment.">
   <meta property="og:url" content="https://edgerequals.github.io/equals-imaginarium/">
   <meta property="og:image" content="https://edgerequals.github.io/equals-imaginarium/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js" crossorigin>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Equals Imaginarium — home">
-        <img src="assets/logo.svg" alt="" width="36" height="36">
-        <span class="brand-text"><strong>equals</strong> imaginarium</span>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="sr-only">Menu</span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#showcase">Showcase</a></li>
-          <li><a href="#involved">Get involved</a></li>
-          <li><a href="#contact" class="nav-cta">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- ============ HERO ============ -->
-    <section id="top" class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">A creative engineering lab · Perth, Australia</p>
-          <h1 id="hero-title">Idea <span class="eq" aria-hidden="true">=</span><span class="sr-only">equals</span> experiment.</h1>
-          <p class="lede">Equals Imaginarium is where curiosity gets a workbench. We take “what if?” and turn it into something you can measure, build, break and build again.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#showcase">See the experiments</a>
-            <a class="btn btn-ghost" href="#contact">Say hello</a>
-          </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 400 400" class="orbit">
-            <defs>
-              <radialGradient id="g1" cx="40%" cy="35%"><stop offset="0" stop-color="#ffe2a8"/><stop offset="1" stop-color="#ff6b4a"/></radialGradient>
-            </defs>
-            <circle cx="200" cy="200" r="170" class="ring"/>
-            <circle cx="200" cy="200" r="120" class="ring ring-dashed"/>
-            <circle cx="200" cy="200" r="70" class="ring"/>
-            <rect x="120" y="168" width="160" height="22" rx="11" fill="#0f1220"/>
-            <rect x="120" y="212" width="160" height="22" rx="11" fill="#ffb547"/>
-            <g class="spin"><circle cx="370" cy="200" r="12" fill="url(#g1)"/></g>
-            <g class="spin spin-slow"><circle cx="200" cy="80" r="8" fill="#7cc4ff"/></g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="container">
-        <p class="eyebrow">The concept</p>
-        <h2 id="about-title">Imagination, held to account.</h2>
-        <div class="about-grid">
-          <p class="about-intro">The “equals” is the promise: every idea has to balance against reality. We sketch boldly, then test honestly — with prototypes, measurements and notes anyone can follow.</p>
-          <ol class="principles">
-            <li><span class="num">01</span><h3>Imagine</h3><p>Start with a question worth chasing, however odd it sounds.</p></li>
-            <li><span class="num">02</span><h3>Build</h3><p>Make the simplest thing that could possibly answer it.</p></li>
-            <li><span class="num">03</span><h3>Measure</h3><p>Let the data argue back. Record what actually happened.</p></li>
-            <li><span class="num">04</span><h3>Share</h3><p>Publish the build notes, the wins and the glorious failures.</p></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SHOWCASE ============ -->
-    <section id="showcase" class="section section-dark" aria-labelledby="showcase-title">
-      <div class="container">
-        <p class="eyebrow">Showcase</p>
-        <h2 id="showcase-title">On the bench.</h2>
-        <p class="section-lede">A few current and imagined experiments. Edit or add cards in <code>index.html</code>.</p>
-        <div class="cards">
-          <article class="card card-feature">
-            <div class="card-art">
-              <svg viewBox="0 0 320 200" role="img" aria-labelledby="ant-t">
-                <title id="ant-t">Illustration of a vertical aerial with a sphere top-hat radiating waves</title>
-                <path d="M190 60 a40 40 0 0 1 0 80 M205 45 a60 60 0 0 1 0 110 M220 30 a80 80 0 0 1 0 140" class="wave"/>
-                <path d="M130 60 a40 40 0 0 0 0 80 M115 45 a60 60 0 0 0 0 110 M100 30 a80 80 0 0 0 0 140" class="wave"/>
-                <line x1="160" y1="60" x2="160" y2="180" stroke="#c9cede" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="160" cy="48" r="16" fill="#c9cede"/><circle cx="155" cy="43" r="5" fill="#fff" opacity=".7"/>
-                <rect x="140" y="178" width="40" height="10" rx="3" fill="#ffb547"/>
-              </svg>
-            </div>
-            <div class="card-body">
-              <p class="tag">Radio · In progress</p>
-              <h3>The 21 MHz sphere-hat aerial</h3>
-              <p>A compact vertical for the 15 m band, capped with a 150 mm stainless sphere as a capacitive top-hat to shorten the radiator. Tuning, matching and field tests to follow.</p>
-              <dl class="specs"><div><dt>Band</dt><dd>21 MHz</dd></div><div><dt>Top-hat</dt><dd>150 mm sphere</dd></div><div><dt>Status</dt><dd>Building</dd></div></dl>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-art">
-              <svg viewBox="0 0 320 200" role="img" aria-labelledby="sig-t"><title id="sig-t">Illustration of a signal waveform on a grid</title>
-                <g class="grid"><path d="M0 50H320M0 100H320M0 150H320M80 0V200M160 0V200M240 0V200"/></g>
-                <path d="M0 100 Q20 40 40 100 T80 100 T120 100 T160 100 T200 100 T240 100 T280 100 T320 100" class="trace"/>
-              </svg>
-            </div>
-            <div class="card-body"><p class="tag">Instruments · Idea</p><h3>Signals you can see</h3><p>Placeholder project: simple tools that make invisible things — RF, sound, vibration — visible and playful.</p></div>
-          </article>
-
-          <article class="card">
-            <div class="card-art">
-              <svg viewBox="0 0 320 200" role="img" aria-labelledby="mk-t"><title id="mk-t">Illustration of stacked geometric shapes forming a prototype</title>
-                <rect x="110" y="120" width="100" height="40" rx="6" fill="#7cc4ff"/>
-                <rect x="130" y="80" width="60" height="40" rx="6" fill="#ffb547"/>
-                <circle cx="160" cy="58" r="22" fill="#ff6b4a"/>
-              </svg>
-            </div>
-            <div class="card-body"><p class="tag">Making · Idea</p><h3>Small machines</h3><p>Placeholder project: mechanisms and kinetic objects built from whatever is on the shelf.</p></div>
-          </article>
-
-          <article class="card">
-            <div class="card-art">
-              <svg viewBox="0 0 320 200" role="img" aria-labelledby="nb-t"><title id="nb-t">Illustration of an open notebook with sketches</title>
-                <rect x="70" y="40" width="180" height="120" rx="8" fill="#f4f1ea"/>
-                <line x1="160" y1="40" x2="160" y2="160" stroke="#0f1220" stroke-opacity=".2" stroke-width="2"/>
-                <path d="M90 70h50M90 90h40M90 110h55" stroke="#0f1220" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
-                <circle cx="205" cy="95" r="25" fill="none" stroke="#ff6b4a" stroke-width="4"/>
-              </svg>
-            </div>
-            <div class="card-body"><p class="tag">Notes · Ongoing</p><h3>The lab notebook</h3><p>Build logs, measurements and lessons learned, written up so others can repeat — or improve — the experiment.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GET INVOLVED ============ -->
-    <section id="involved" class="section" aria-labelledby="involved-title">
-      <div class="container">
-        <p class="eyebrow">Get involved</p>
-        <h2 id="involved-title">Bring an idea. Or a soldering iron.</h2>
-        <div class="involve-grid">
-          <div class="involve"><span class="involve-icon" aria-hidden="true">✦</span><h3>Suggest an experiment</h3><p>Got a question you’ve always wanted tested? Send it in — the stranger the better.</p></div>
-          <div class="involve"><span class="involve-icon" aria-hidden="true">⚙</span><h3>Collaborate</h3><p>Makers, hams, coders and tinkerers welcome. Let’s build something together.</p></div>
-          <div class="involve"><span class="involve-icon" aria-hidden="true">✉</span><h3>Follow along</h3><p>Get build notes and results as experiments wrap up. No spam, just signal.</p></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ CONTACT / FOOTER ============ -->
-  <footer id="contact" class="site-footer" aria-labelledby="contact-title">
-    <div class="container footer-grid">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2 id="contact-title">Let’s make something <span class="eq">=</span> real.</h2>
-        <!-- PLACEHOLDER: replace hello@example.com with your real email address (also in the form action below) -->
-        <p>Email <a href="mailto:hello@example.com">hello@example.com</a></p>
-        <!-- PLACEHOLDER: replace these social links/handles with your real profiles, or delete them -->
-        <ul class="socials">
-          <li><a href="https://x.com/your-handle">X / @your-handle</a></li>
-          <li><a href="https://github.com/your-handle">GitHub / your-handle</a></li>
-        </ul>
-      </div>
-      <!-- PLACEHOLDER FORM ENDPOINT: this uses mailto: so it works with no backend.
-           For a real form, swap action for e.g. a Formspree/Netlify Forms endpoint:
-           action="https://formspree.io/f/YOUR_FORM_ID" method="POST" (and remove enctype). -->
-      <form class="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
-        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="message">Your idea or message</label><textarea id="message" name="message" rows="4" required></textarea></div>
-        <button class="btn btn-primary" type="submit">Send message</button>
-      </form>
-    </div>
-    <div class="container footer-bottom">
-      <p>© <span id="year">2026</span> Equals Imaginarium · Perth, Western Australia</p>
-      <a href="#top">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <script src="js/main.js" defer></script>
+  <div class="poster" aria-hidden="true"></div>
+  <canvas id="world" role="img" tabindex="0"
+    aria-label="Equals Imaginarium: a floating, first-person space of orbiting bodies"
+    aria-describedby="world-desc"></canvas>
+  <p id="world-desc" class="sr-only">An interactive 3D space with no words. You float inside it. Drag to look around. On a touch screen, drag on the left half to drift and on the right half to look, and pinch to float forward or back. With a mouse, scroll to float forward or back and right-drag to drift. On a keyboard, W A S D moves, arrow keys look and move, Q and E sink and rise. Thousands of small lights sweep past on golden-ratio orbits around a nebula, while a steel sphere, two rings, an equals sign and a coral bead drift and bounce inside an invisible bounded space ahead of you.</p>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
